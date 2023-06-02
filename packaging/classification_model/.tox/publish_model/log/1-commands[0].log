@@ -1,0 +1,25 @@
+name: publish_model
+run_id: commands[0]
+env HOME: /home/manuel
+env LANG: en_US.UTF-8
+env TERM: xterm-256color
+env LD_LIBRARY_PATH: /opt/xilinx/xrt/lib:
+env PATH: /mnt/storage/Bowpi/Data Science/cc_approval/continuous_integration/ci_cd/packaging/classification_model/.tox/test_package/bin:/home/manuel/.nvm/versions/node/v14.4.0/bin:/home/manuel/anaconda3/envs/model-deployment/bin:/home/manuel/anaconda3/condabin:/opt/xilinx/xrt/bin:/tools/Xilinx/Vitis_HLS/2021.2/bin:/tools/Xilinx/Model_Composer/2021.2/bin:/tools/Xilinx/Vitis/2021.2/bin:/tools/Xilinx/Vitis/2021.2/gnu/microblaze/lin/bin:/tools/Xilinx/Vitis/2021.2/gnu/arm/lin/bin:/tools/Xilinx/Vitis/2021.2/gnu/microblaze/linux_toolchain/lin64_le/bin:/tools/Xilinx/Vitis/2021.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin:/tools/Xilinx/Vitis/2021.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin:/tools/Xilinx/Vitis/2021.2/gnu/aarch64/lin/aarch64-linux/bin:/tools/Xilinx/Vitis/2021.2/gnu/aarch64/lin/aarch64-none/bin:/tools/Xilinx/Vitis/2021.2/gnu/armr5/lin/gcc-arm-none-eabi/bin:/tools/Xilinx/Vitis/2021.2/tps/lnx64/cmake-3.3.2/bin:/tools/Xilinx/Vitis/2021.2/aietools/bin:/tools/Xilinx/Vivado/2021.2/bin:/tools/Xilinx/DocNav:/home/manuel/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/cuda/bin
+env PYTHONHASHSEED: 1019958020
+env PIP_DISABLE_PIP_VERSION_CHECK: 1
+env PYTHONIOENCODING: utf-8
+env GEMFURY_PUSH_URL: https://JjeWHGPmg23XkzufwPzb@push.fury.io/mriosrivas/
+env PYTHONPATH: .
+env TOX_ENV_NAME: publish_model
+env TOX_WORK_DIR: /mnt/storage/Bowpi/Data Science/cc_approval/continuous_integration/ci_cd/packaging/classification_model/.tox
+env TOX_ENV_DIR: /mnt/storage/Bowpi/Data Science/cc_approval/continuous_integration/ci_cd/packaging/classification_model/.tox/test_package
+env VIRTUAL_ENV: /mnt/storage/Bowpi/Data Science/cc_approval/continuous_integration/ci_cd/packaging/classification_model/.tox/test_package
+env COLUMNS: 122
+env LINES: 33
+metadata pid: 35113
+cwd: /mnt/storage/Bowpi/Data Science/cc_approval/continuous_integration/ci_cd/packaging/classification_model
+allow: *
+cmd: python classification_model/train_pipeline.py
+exit_code: 0
+ROC AUC Training = 0.9676330940855061
+ROC AUC Test = 0.7431282051282051

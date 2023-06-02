@@ -1,0 +1,63 @@
+# Package Overview
+package_name: classification_model
+
+# Data Files
+training_data_file: train.csv
+test_data_file: test.csv
+
+# Variables
+# The variable we are attempting to predict (sale price)
+target: status
+
+pipeline_name: classification_model
+pipeline_save_file: classification_model_output_v
+
+
+variables_to_rename:
+  days_birth: age
+  days_employed: years_employed
+
+features:
+  - amt_income_total
+  - name_family_status
+  - age # renamed
+  - years_employed # renamed
+  - occupation_type
+
+# set train/test split
+test_size: 0.1
+
+# to set the random seed
+random_state: 0
+
+# Rare label parameters
+rare_label_tol: 0.10
+rare_label_n_categories: 4
+
+# Categorical encoder method
+categorical_encoder_method: ordered
+
+# Random forest classifier parameters
+rfc_n_estimators: 200
+rfc_criterion: entropy
+rfc_max_depth: 1000
+rfc_min_samples_split: 10
+rfc_min_samples_leaf: 10
+rfc_class_weight:
+  0: 1
+  1: 10000
+
+
+# Numerical features into year format
+numerical_features_to_years:
+  - age
+  - years_employed
+
+# Missing data and rare labels
+categorical_features_with_na_missing_and_rare_label:
+ - occupation_type
+
+# Categorical encoding
+categorical_features_encoding:
+  - name_family_status
+  - occupation_type
